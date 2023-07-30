@@ -1,0 +1,17 @@
+<input type="tel" id="phone" placeholder="Phone" />
+
+<script>
+var phoneInput = document.getElementById("phone");
+
+function validatePhone() {
+  var phone = phoneInput.value;
+
+  var regex = /^[0-9]{10}$/;
+
+  if (!regex.test(phone)) {
+    alert("Please enter a valid phone number.");
+  }
+}
+
+phoneInput.addEventListener("input", validatePhone);
+</script>

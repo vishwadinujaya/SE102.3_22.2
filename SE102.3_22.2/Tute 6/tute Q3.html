@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Color Change</title>
+</head>
+<body>
+<h1>Color Change</h1>
+<p>Click on the buttons to change the background color.</p>
+<button id="red" style="background-color: red;">Red</button>
+<button id="green" style="background-color: green;">Green</button>
+<button id="blue" style="background-color: blue;">Blue</button>
+<script>
+var buttons = document.querySelectorAll("button");
+
+for (var button of buttons) {
+  button.onmouseover = function() {
+    this.style.backgroundColor = this.id;
+  };
+
+  button.onmouseout = function() {
+    this.style.backgroundColor = "white";
+  };
+}
+</script>
+</body>
+</html>

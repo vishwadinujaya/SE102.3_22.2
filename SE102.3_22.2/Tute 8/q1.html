@@ -1,0 +1,25 @@
+<input type="text" id="firstname" placeholder="First name" />
+<input type="text" id="lastname" placeholder="Last name" />
+<input type="email" id="email" placeholder="Email" />
+<input type="tel" id="phone" placeholder="Phone" />
+<input type="password" id="password" placeholder="Password" />
+
+<script>
+var inputs = document.querySelectorAll("input");
+
+function checkEmpty() {
+  var emptyInputs = [];
+
+  for (var input of inputs) {
+    if (input.value === "") {
+      emptyInputs.push(input);
+    }
+  }
+
+  if (emptyInputs.length > 0) {
+    alert("Please fill in all of the fields.");
+  }
+}
+
+inputs.forEach(input => input.addEventListener("input", checkEmpty));
+</script>
